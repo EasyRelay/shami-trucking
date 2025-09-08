@@ -66,7 +66,7 @@ const About: React.FC = () => {
           <ScrollAnimatedSection animation="slideLeft" delay={0.2}>
             <div className="relative">
               <img
-                src="/image/refer-image.jpg"
+                src="/image/refer-image.png"
                 alt="Freight truck on highway"
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />

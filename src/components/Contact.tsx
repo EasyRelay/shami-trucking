@@ -26,21 +26,26 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-
+  
     try {
       // remove empty fields
       const filteredData = Object.fromEntries(
         Object.entries(formData).filter(([_, value]) => value.trim() !== "")
       );
-
+  
+      // objectni string ko‘rinishga o‘tkazamiz
+      const data = Object.entries(filteredData)
+        .map(([key, value]) => `${key}: ${value}`)
+        .join("\n");
+  
       const res = await fetch('https://eo6fd094zqrclmh.m.pipedream.net', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(filteredData),
+        body: JSON.stringify({ text: data }), // text property ichida string yuboramiz
       });
-
+  
       if (!res.ok) throw new Error('Network response was not ok');
-
+  
       setStatus('success');
       setFormData({
         name: '',
@@ -54,11 +59,12 @@ const Contact: React.FC = () => {
       console.error(err);
       setStatus('error');
     }
-
+  
     setTimeout(() => {
       setStatus('idle');
     }, 3000);
   };
+  
 
 
   return (
