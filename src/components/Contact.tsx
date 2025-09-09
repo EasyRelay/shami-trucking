@@ -26,26 +26,26 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-  
+
     try {
       // remove empty fields
       const filteredData = Object.fromEntries(
         Object.entries(formData).filter(([_, value]) => value.trim() !== "")
       );
-  
+
       // objectni string ko‘rinishga o‘tkazamiz
       const data = Object.entries(filteredData)
         .map(([key, value]) => `${key}: ${value}`)
         .join("\n");
-  
+
       const res = await fetch('https://eo6fd094zqrclmh.m.pipedream.net', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: data }), // text property ichida string yuboramiz
       });
-  
+
       if (!res.ok) throw new Error('Network response was not ok');
-  
+
       setStatus('success');
       setFormData({
         name: '',
@@ -59,13 +59,11 @@ const Contact: React.FC = () => {
       console.error(err);
       setStatus('error');
     }
-  
+
     setTimeout(() => {
       setStatus('idle');
     }, 3000);
   };
-  
-
 
   return (
     <section id="contact" className="py-20 bg-swamp-900">
@@ -200,16 +198,16 @@ const Contact: React.FC = () => {
                 </span>
               </button>
               {status === 'success' && (
-              <p className="text-green-600 font-medium text-center">
-                ✅ Your message has been sent successfully!
-              </p>
-            )}
+                <p className="text-green-600 font-medium text-center">
+                  ✅ Your message has been sent successfully!
+                </p>
+              )}
 
-            {status === 'error' && (
-              <p className="text-red-600 font-medium text-center">
-                ❌ Something went wrong. Please try again.
-              </p>
-            )}
+              {status === 'error' && (
+                <p className="text-red-600 font-medium text-center">
+                  ❌ Something went wrong. Please try again.
+                </p>
+              )}
             </form>
           </ScrollAnimatedSection>
 

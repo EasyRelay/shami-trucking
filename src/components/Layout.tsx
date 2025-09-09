@@ -216,6 +216,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <p className="text-gray-400">
               © 2025 SHAMI TRUCKING LLC. All rights reserved. | MC: 780535 | DOT: 2252265
             </p>
+            <p className='text-gray-400'>
+              Created by <Link to="" className='hover:text-blue-500'>EasyIT</Link></p>
           </div>
         </div>
       </footer>
