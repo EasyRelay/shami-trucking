@@ -21,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="rounded-lg transition-colors">
-                <img src="/image/logo.png" alt="SHAMI TRUCKING" className="h-20 w-36" />
+                <img src="/image/image.png" alt="SHAMI TRUCKING" className="h-20 w-36" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-swamp-900">SHAMI TRUCKING</h1>
@@ -147,7 +147,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="rounded-lg">
-                  <img src="/image/logo.png" alt="SHAMI TRUCKING" className="h-16 w-24" />
+                  <img src="/image/image.png" alt="SHAMI TRUCKING" className="h-16 w-24" />
                 </div>
                 <h3 className="text-xl font-bold">SHAMI TRUCKING <br /> LLC</h3>
               </div>
