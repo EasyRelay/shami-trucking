@@ -25,7 +25,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-swamp-900">SHAMI TRUCKING</h1>
-                <p className="text-sm text-swamp-600">MC: 780535 | DOT: 2252265</p>
               </div>
             </Link>
 
