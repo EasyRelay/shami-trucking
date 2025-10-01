@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Shield, Eye, Lock } from 'lucide-react';
+import { Shield, Eye, Lock, Phone } from 'lucide-react';
 import ScrollAnimatedSection from '../components/ScrollAnimatedSection';
 
 const PrivacyPolicy: React.FC = () => {
@@ -70,6 +70,25 @@ const PrivacyPolicy: React.FC = () => {
             </ScrollAnimatedSection>
 
             <ScrollAnimatedSection animation="slideUp" delay={0.3} className="mb-8">
+              <h2 className="text-2xl font-bold text-swamp-900 mb-4 flex items-center">
+                <Phone className="h-6 w-6 mr-2 text-swamp-600" />
+                RingCentral Integration
+              </h2>
+              <p className="text-gray-600 mb-4">
+                Our service uses RingCentral's APIs to facilitate communication. When you connect your 
+                RingCentral account, we may access and use data such as:
+              </p>
+              <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                <li>Your RingCentral account information</li>
+                <li>Call and message metadata (not message content)</li>
+                <li>Contact and directory information</li>
+              </ul>
+              <p className="text-gray-600 mt-4">
+                This data is not shared with third parties except as required to operate the service.
+              </p>
+            </ScrollAnimatedSection>
+
+            <ScrollAnimatedSection animation="slideUp" delay={0.4} className="mb-8">
               <h2 className="text-2xl font-bold text-swamp-900 mb-4">Information Sharing</h2>
               <p className="text-gray-600 mb-4">
                 We do not sell, trade, or rent your personal information to third parties. We may share 
@@ -83,7 +102,7 @@ const PrivacyPolicy: React.FC = () => {
               </ul>
             </ScrollAnimatedSection>
 
-            <ScrollAnimatedSection animation="slideUp" delay={0.4} className="mb-8">
+            <ScrollAnimatedSection animation="slideUp" delay={0.5} className="mb-8">
               <h2 className="text-2xl font-bold text-swamp-900 mb-4">Data Security</h2>
               <p className="text-gray-600 mb-4">
                 We implement appropriate technical and organizational security measures to protect your 
@@ -92,7 +111,7 @@ const PrivacyPolicy: React.FC = () => {
               </p>
             </ScrollAnimatedSection>
 
-            <ScrollAnimatedSection animation="slideUp" delay={0.5} className="mb-8">
+            <ScrollAnimatedSection animation="slideUp" delay={0.6} className="mb-8">
               <h2 className="text-2xl font-bold text-swamp-900 mb-4">Your Rights</h2>
               <p className="text-gray-600 mb-4">You have the right to:</p>
               <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
@@ -103,7 +122,7 @@ const PrivacyPolicy: React.FC = () => {
               </ul>
             </ScrollAnimatedSection>
 
-            <ScrollAnimatedSection animation="slideUp" delay={0.6} className="mb-8">
+            <ScrollAnimatedSection animation="slideUp" delay={0.7} className="mb-8">
               <h2 className="text-2xl font-bold text-swamp-900 mb-4">Regulatory Compliance</h2>
               <p className="text-gray-600">
                 As a licensed motor carrier (MC: 780535, DOT: 2252265), we maintain records as required 
@@ -112,7 +131,7 @@ const PrivacyPolicy: React.FC = () => {
               </p>
             </ScrollAnimatedSection>
 
-            <ScrollAnimatedSection animation="slideUp" delay={0.7} className="mb-8">
+            <ScrollAnimatedSection animation="slideUp" delay={0.8} className="mb-8">
               <h2 className="text-2xl font-bold text-swamp-900 mb-4">Contact Us</h2>
               <p className="text-gray-600 mb-4">
                 If you have questions about this Privacy Policy or how we handle your information, 
@@ -126,7 +145,7 @@ const PrivacyPolicy: React.FC = () => {
               </div>
             </ScrollAnimatedSection>
 
-            <ScrollAnimatedSection animation="fadeIn" delay={0.8} className="border-t border-gray-200 pt-8">
+            <ScrollAnimatedSection animation="fadeIn" delay={0.9} className="border-t border-gray-200 pt-8">
               <p className="text-sm text-gray-500">
                 This Privacy Policy may be updated periodically to reflect changes in our practices 
                 or legal requirements. We will notify you of any material changes by posting the 
